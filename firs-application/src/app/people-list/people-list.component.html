@@ -1,0 +1,27 @@
+
+<ul *ngFor="let person of people">
+  <app-person-details (deletePerson)="deleteOnePerson($event)" [person]='person'></app-person-details>
+</ul>
+
+
+<!--<table class="table">-->
+  <!--<thead style="text-align: right" scope="row"><strong>All participants of comming "Summer of good works" project</strong>-->
+  <!--</thead>-->
+  <!--<tbody  *ngFor="let person of people">-->
+  <!--<tr>-->
+    <!--<th style="text-align: center" scope="row">{{person.pid}}</th>-->
+    <!--<td style="text-align: left" > {{person.name}} {{person.middleName}} {{person.surname}}</td>-->
+    <!--<td> <div *ngIf="person.email || person.phone"> {{person.email}} {{person.phone}}</div>-->
+      <!--<div *ngIf="!person.email && !person.phone"> - </div>-->
+    <!--</td>-->
+    <!--<td>-->
+      <!--<div *ngIf="!person.groups"> No groups</div>-->
+      <!--<div *ngIf="person.groups?.length > 1"> {{person.groups.length}} groups: {{person.groups}}  </div>-->
+      <!--<div *ngIf="person.groups?.length == 1"> Only one group: {{person.groups}}  </div>-->
+
+
+    <!--</td>-->
+  <!--</tr>-->
+
+  <!--</tbody>-->
+<!--</table>-->
