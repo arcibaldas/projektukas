@@ -1,8 +1,8 @@
-language: java
-jdk:
-  - oraclejdk11
-cache:
-  directories:
-    - $HOME/.m2
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+language: node_js
+node_js:
+  - "11"
+cache: yarn
+script:
+  - yarn lint
+  - yarn test --watch=false --browsers=ChromeHeadless
+  - yarn build --prod
